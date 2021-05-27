@@ -2,10 +2,6 @@
 ## Instructions
 - The Assignments can be found under [assignments/](assignments/)
 - The Slides from the classes can be found under [slides/](slides/)
-- Please make sure to program each assignment in one separate `.cpp`-File:
-  - `nim.cpp`
-  - `tictactoe.cpp`
-- Place each file at the root of your repository.
 ---
 ## Updates
 - Updates to the Slides will not be synced automatically.
