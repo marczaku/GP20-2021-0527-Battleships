@@ -198,7 +198,7 @@ void Foo();
 ```
 
 - Problems can be prevented by enclosing **every** header file with the following construction:
-   `called include guards`
+   called `include guards`
 - The preprocessor will include code only once, second include will be skipped
 
 ```c++
