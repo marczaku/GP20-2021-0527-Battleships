@@ -205,7 +205,8 @@ void Foo();
 #pragma once
 
 int Add(int, int);
-void Foo();```
+void Foo();
+```
 
 - More modern approach for include guards
 - Not a C++ Standard!
