@@ -1,4 +1,4 @@
-# GP20-2021-0524-Nim-Game
+# GP20-2021-0527-Battleships
 ## Instructions
 - The Assignments can be found under [assignments/](assignments/)
 - The Slides from the classes can be found under [slides/](slides/)
@@ -9,7 +9,7 @@
 ---
 ## Updates
 - Updates to the Slides will not be synced automatically.
-- If you want to update the Instructions or Slides, make sure to look back here regularly.
+- If you want to update the Instructions or Slides, make sure to look back [here](https://github.com/marczaku/GP20-2021-0527-Battleships/edit/main/README.md) regularly.
 - I will also see that I'll send notifications your ways every now and then.
 ---
 ## Prerequisites
