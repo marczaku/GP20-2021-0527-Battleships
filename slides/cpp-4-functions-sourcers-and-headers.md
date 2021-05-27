@@ -32,10 +32,11 @@ int Add(int iValue1, int iValue2)
   - *variable number of parameters is possible, but more complicated and considered ugly*
 <br/><br/>
 
-- But only **one** return type can use `parameters` to return more than one value, more on that later
+- But only **one** return type 
+  - can use `parameters` to return more than one value, more on that later
 - **Return** terminates a function immediately and returns the argument
 - Data types must match (or implicitly convertible)
-- There must be *at least* one return statement on every code path
+- There should be *at least* one return statement on every code path
 
 ---
 
@@ -46,19 +47,19 @@ void Print()
 	cout << "Hello" << endl;
 }
 ```
-
-```c++
-void Print(void)
-{
-	cout << "Hello" << endl;
-}
-```
 <br/><br/>
 
 - Special return type **void** for functions without a return type
   - `Void` has more uses,  more on that later
   <br/><br/>
   
+```c++
+void Print(void)
+{
+	cout << "Hello" << endl;
+}
+```
+
 - Formerly: `void` as `parameter` type for functions without parameters
   - *They can still do that, but do not have to*
   <br/><br/>
@@ -200,6 +201,18 @@ void Foo();
    `called include guards`
 - The preprocessor will include code only once, second include will be skipped
 
+```c++
+#pragma once
+
+int Add(int, int);
+void Foo();```
+
+- More modern approach for include guards
+- Not a C++ Standard!
+- But supported by most compilers
+- Behaviour may be partially unpredictable
+  - e.g. for duplicate files in separate paths
+
 ---
 
 ## 13. Inline Functions -1
@@ -228,7 +241,7 @@ int Add(int i, int j)
 ```
 - When `declaration` and `definition` are separated, and **both** are in a header file, a definition must use key word  **inline**
 <br/><br/>
-- **Otherwise:** `Linker error!`
+- **Otherwise:** `Linker error!` (why?)
 
 ---
 
@@ -241,6 +254,7 @@ int Add(int i, int j)
   <br/><br/>
 - A compromise is the use of **inline files**
   - These are not a standardized feature, but something you can do with the `#include` statement
+  - Explicitly discouraged by Google Standard
 
 ---
 
@@ -268,13 +282,6 @@ extern int g_iNumEntries;
 
 ## 17. Recursion
 
-### Functions can call themselves!
-**Example: Fibonacci Numbers**
-- The first two Fibonacci numbers are `1` and `1`
-<br/><br/>
-- Every Fibonacci number is the sum of the previous two
-  - i.e. 3rd is 1+1 = 2
-  - 4th is 2+1 = 3 etc.
-  - 1 1 2 3 5 8 13 21 etc.
-
+- Functions can call themselves!
+- But be careful, not to run into endless loops! :)
 ---
