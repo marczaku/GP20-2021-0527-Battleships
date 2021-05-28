@@ -5,7 +5,7 @@
 ---
 ## Updates
 - Updates to the Slides will not be synced automatically.
-- If you want to update the Instructions or Slides, make sure to look back [here](https://github.com/marczaku/GP20-2021-0527-Battleships/edit/main/README.md) regularly.
+- If you want to update the Instructions or Slides, make sure to look back [here](https://github.com/marczaku/GP20-2021-0527-Battleships) regularly.
 - I will also see that I'll send notifications your ways every now and then.
 ---
 ## Prerequisites
