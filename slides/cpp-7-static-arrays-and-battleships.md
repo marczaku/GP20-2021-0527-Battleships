@@ -51,9 +51,15 @@ int aiMyArray[10] = { 0, 1, 0, 1, 1, 0, 0, 0, 0, 0 };
 
 or
 
-int aiMyArray[10] = { 0 };
+int aiMyArray[10] { 0 };
 ```
 - The list may be shorter than actual array; missing values are = `0`
+
+### Using memcpy
+```c++
+int aiMyArray[10];
+memcpy(&aiMyArray, 0, sizeof(aiMyArray));
+```
 
 ---
 
