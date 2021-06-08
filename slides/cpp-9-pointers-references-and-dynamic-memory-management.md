@@ -22,13 +22,14 @@
   - Also on the operating system
   - **DOS:** 20bit addresses
   - **Windows95 and later:** 32bit addresses per process (= program)
+  - **64-bit systems:** 64 bit addresses (why?)
     
 ---
 
 ## 3. Pointers
 
-- Memory addresses are just `integer` values
-  -It is possible to store a memory address in a variable! &#8594; Pointers
+- Memory addresses are just `unsigned integer` values
+  - It is possible to store a memory address in a variable! &#8594; Pointers
 
 - **But:** memory address points only to a single byte
   - It is only useful if you know the size and type of data at that address
@@ -62,11 +63,12 @@ int* piNumber = 0;   // typical init
   - **old-fashioned:** `NULL` *(#define NULL 0)*
   - `"Null-Pointer"`
   - `0` is – in theory – a valid memory address, but it is never used in user programs
+  - `nullptr`: C++ 11 and higher (why?)
 
 ````c++
 int* piNumber = 4;		// Error! int* is not int!
 int* piNumber = (int*) 4;	// type cast – ok (syntactically)
-int** piNumber;		// ok! pointer to pointer to int 
+int** piNumber;			// ok! pointer to pointer to int 
 ````
 - `Pointers` are **independent** data types!
 
@@ -88,6 +90,7 @@ pi = &f; 		// Error – type mismatch int* vs. float*
 - **Address-Operator** `&` gives address of any variable
   - In fact, even of functions (more later!)
   - Unary operator
+    - operators that act upon a single operand to produce a new value
   - **Do not confuse** with binary `AND &` (which is a binary operator)
 
 ---
@@ -131,8 +134,9 @@ cout << i << endl;		// this affects i!
 - `pointersO are dereferenced by putting `*` in front of the pointer name
 - The operation now accesses the value pointed to
 
-- You cannot dereference a pointer of type `void` (why?)
-- Dereferencing of `Null-Pointer` (or pointer w/ invalid value) causes crash (why?) – but not always (why?)
+- You cannot dereference a pointer of type `void*` (why?)
+- Dereferencing of `Null-Pointer` (or pointer with invalid value) causes crash (why?) 
+- – but not always (why?)
 
 ---
 
@@ -149,7 +153,7 @@ cout << (float*) p << endl;
 ````
 - `pointers` can be type cast like any other data type
 - `void pointers` are compatible with any other `pointer` type without a type cast
-- `void pointers` **cannot** be dereferenced and must be cast to a valid type first
+- again: `void pointers` **cannot** be dereferenced and must be cast to a valid type first
 
 ---
 
