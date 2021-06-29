@@ -1168,7 +1168,7 @@ xAnotherKeyboard = xKeyboard;		// error (assignment op private)
 
 ---
 
-## 54. Explicit Constructors
+## 54. Implicit Constructors
 ```c++
 class CPlayer
 {
@@ -1186,7 +1186,7 @@ xPlayer  = “Bob”;		// implicit type cast
 
 ---
 
-## 55. Explicit Constructors - 2
+## 55. Explicit Constructors
 ```c++
 class CPlayer
 {
